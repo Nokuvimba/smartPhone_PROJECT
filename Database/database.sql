@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `smartphones` /*!40100 DEFAULT CHARACTER SET utf8
 USE `smartphones`;
 -- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
 --
--- Host: localhost    Database: smartphones
+-- Host: 127.0.0.1    Database: smartphones
 -- ------------------------------------------------------
 -- Server version	8.0.36
 
@@ -30,7 +30,7 @@ CREATE TABLE `customer` (
   `email` varchar(50) NOT NULL,
   `phone_no` varchar(20) NOT NULL,
   PRIMARY KEY (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,6 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES (1,'John Doe','JohnDoe@email.com','1234567898');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -56,7 +55,7 @@ CREATE TABLE `device` (
   `model` varchar(50) NOT NULL,
   `cost` decimal(5,2) NOT NULL,
   PRIMARY KEY (`device_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +64,6 @@ CREATE TABLE `device` (
 
 LOCK TABLES `device` WRITE;
 /*!40000 ALTER TABLE `device` DISABLE KEYS */;
-INSERT INTO `device` VALUES (1,'Apple','Iphone X',210.00);
 /*!40000 ALTER TABLE `device` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -84,7 +82,7 @@ CREATE TABLE `phone_info` (
   PRIMARY KEY (`info_id`),
   KEY `device_id` (`device_id`),
   CONSTRAINT `phone_info_ibfk_1` FOREIGN KEY (`device_id`) REFERENCES `device` (`device_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +91,6 @@ CREATE TABLE `phone_info` (
 
 LOCK TABLES `phone_info` WRITE;
 /*!40000 ALTER TABLE `phone_info` DISABLE KEYS */;
-INSERT INTO `phone_info` VALUES (1,1,'256 GB','IOS');
 /*!40000 ALTER TABLE `phone_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,7 +112,7 @@ CREATE TABLE `store` (
   KEY `customer_id` (`customer_id`),
   CONSTRAINT `store_ibfk_1` FOREIGN KEY (`device_id`) REFERENCES `device` (`device_id`),
   CONSTRAINT `store_ibfk_2` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -124,7 +121,6 @@ CREATE TABLE `store` (
 
 LOCK TABLES `store` WRITE;
 /*!40000 ALTER TABLE `store` DISABLE KEYS */;
-INSERT INTO `store` VALUES (1,1,1,'Galway Store','123 Main Street');
 /*!40000 ALTER TABLE `store` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -137,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-25 13:00:32
+-- Dump completed on 2024-03-23 12:38:47
