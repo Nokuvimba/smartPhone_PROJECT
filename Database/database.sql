@@ -211,8 +211,9 @@ DROP TABLE IF EXISTS `phone_info`;
 CREATE TABLE `phone_info` (
   `device_id` int NOT NULL,
   `info_id` int NOT NULL AUTO_INCREMENT,
-  `storage` varchar(25) NOT NULL,
-  `os_name` varchar(50) NOT NULL,
+  `storage` varchar(50) NOT NULL,
+  `os_name` varchar(25) NOT NULL,
+  `processor` varchar(50) NOT NULL,
   PRIMARY KEY (`info_id`),
   KEY `device_id` (`device_id`),
   CONSTRAINT `phone_info_ibfk_1` FOREIGN KEY (`device_id`) REFERENCES `device` (`device_id`)
@@ -225,6 +226,38 @@ CREATE TABLE `phone_info` (
 
 LOCK TABLES `phone_info` WRITE;
 /*!40000 ALTER TABLE `phone_info` DISABLE KEYS */;
+INSERT INTO phone_info (info_id, device_id, os_name, processor, storage) VALUES
+(1, 1, 'IOS', 'A11', '64GB 256GB'),
+(2, 2, 'IOS', 'A11', '64GB 128GB 256GB'),
+(3, 3, 'IOS', 'A12', '64GB 128GB 256GB'),
+(4, 4, 'IOS', 'A14', '64GB 128GB 256GB'),
+(5, 5, 'IOS', 'A11', '64GB 128GB 256GB'),
+(6, 6, 'IOS', 'A13', '64GB 128GB 256GB'),
+(7, 7, 'IOS', 'A13', '64GB 256GB 512GB'),
+(8, 8, 'IOS', 'A14', '128GB 256GB 512GB'),
+(9, 9, 'IOS', 'A15', '128GB 256GB 512GB'),
+(10, 10, 'IOS', 'A15', '128GB 256GB 512GB 1TB'),
+(11, 11, 'IOS', 'A15', '128GB 256GB 512GB'),
+(12, 12, 'IOS', 'A15', '64GB 128GB 256GB'),
+(13, 13, 'IOS', 'A15', '128GB 256GB 512GB'),
+(14, 14, 'IOS', 'A16', '128GB 256GB 512GB 1TB'),
+(15, 15, 'IOS', 'A16', '128GB 256GB 512GB 1TB'),
+(16, 16, 'IOS', 'A16', '128GB 256GB 512GB'),
+(17, 17, 'IOS', 'A17 PRO', '128GB 256GB 512GB 1TB'),
+(18, 18, 'IOS', 'A17 PRO', '128GB 256GB 512GB 1TB'),
+(19, 19, 'Android', 'Snapdragon8 Gen2', '128GB 256GB'),
+(20, 20, 'Android', 'Exynos 2200', '128GB 256GB'),
+(21, 21, 'Android', 'Exynos 2100', '128GB 256GB'),
+(22, 22, 'Android', 'Kryo 680', '256GB 512GB'),
+(23, 23, 'Android', 'Exynos 990', '128GB 256GB'),
+(24, 24, 'Android', 'Octa-core', '256GB 512GB'),
+(25, 25, 'Android', 'Exynos 2200', '128GB 256GB'),
+(26, 26, 'Android', 'Octa-core', '128GB 256GB 512GB 1TB'),
+(27, 27, 'Android', 'Octa-core', '128GB 256GB 512GB 1TB'),
+(28, 28, 'Android', 'ARM Cortex-A76', '128GB 256GB'),
+(29, 29, 'Android', 'Octa-core', '64GB 128GB'),
+(30, 30, 'Android', 'Octa-core', '64GB'),
+(31, 31, 'Android', 'Exynos 2200', '128GB 256GB');
 /*!40000 ALTER TABLE `phone_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -350,7 +383,7 @@ INSERT INTO store (store_id, device_id, customer_id, address, store_name) VALUES
 (24, 20, 97, 'Address24', 'StoreName8'),
 (24, 1, 98, 'Address24', 'StoreName8'),
 (24, 4, 99, 'Address24', 'StoreName8'),
-(24, 7, 100, 'Address24', 'StoreName8'),
+(24, 7, 100, 'Address24', 'StoreName8');
 /*!40000 ALTER TABLE `store` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
