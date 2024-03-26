@@ -1,0 +1,36 @@
+INSERT INTO device (device_id, brand_name, model, cost) VALUES
+(1, 'Apple', 'iPhoneX', 400),
+(2, 'Apple', 'iPhone8', 160),
+(3, 'Apple', 'iPhoneXR', 190),
+(4, 'Apple', 'iPhone12', 300),
+(5, 'Apple', 'iPhone8_plus', 180),
+(6, 'Apple', 'iPhone11', 240),
+(7, 'Apple', 'iPhone11_pro', 290),
+(8, 'Apple', 'iPhone12_pro', 410),
+(9, 'Apple', 'iPhone13', 440),
+(10, 'Apple', 'iPhone13_pro', 570),
+(11, 'Apple', 'iPhone13_mini', 410),
+(12, 'Apple', 'iPhoneSE', 240),
+(13, 'Apple', 'iPhone14', 600),
+(14, 'Apple', 'iPhone14_pro', 770),
+(15, 'Apple', 'iPhone14_pro_max', 940),
+(16, 'Apple', 'iPhone15', 790),
+(17, 'Apple', 'iPhone15_pro', 1040),
+(18, 'Apple', 'iPhone15_pro_max', 1230),
+(19, 'Samsung', 'GalaxyS23', 800),
+(20, 'Samsung', 'GalaxyS22+5G', 650),
+(21, 'Samsung', 'GalaxyS21+5G', 550), 
+(22, 'Samsung', 'GalaxyZFold3+5G', 800),
+(23, 'Samsung', 'Galaxy_Note20+5G', 600),
+(24, 'Samsung', 'GalaxyZFold5', 1000),
+(25, 'Samsung', 'GalaxyS22_Ultra', 850),
+(26, 'Samsung', 'GalaxyA13', 250),
+(27, 'Samsung', 'GalaxyS10E', 350),
+(28, 'Samsung', 'GalaxyA40', 220),
+(29, 'Samsung', 'GalaxyZFlip5', 1000),
+(30, 'Samsung', 'GalaxyS23_Ultra', 1200),
+(31, 'Samsung', 'GalaxyS24_Ultra', 1600);
+
+ALTER TABLE device
+MODIFY COLUMN cost decimal(6,2) NOT NULL;
+
