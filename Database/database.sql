@@ -319,7 +319,7 @@ INSERT INTO store (store_id, device_id, customer_id, address, store_name) VALUES
 (46, 20, 74, 'Address8', 'StoreName3'),
 (8, 21, 64, 'Address8', 'StoreName3'),
 (47, 24, 54, 'Address8', 'StoreName3'),
-(48, 7, 34, 'Address8', 'StoreName3),
+(48, 7, 34, 'Address8', 'StoreName3'),
 (9, 10, 44, 'Address9', 'StoreName3'),
 (49, 21, 14, 'Address9', 'StoreName3'),
 (50, 14, 24, 'Address9', 'StoreName3'),
