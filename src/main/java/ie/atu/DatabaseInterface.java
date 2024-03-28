@@ -8,4 +8,6 @@ public interface DatabaseInterface {
     void addStoreData(String storeName, String address) throws SQLException;
     void connectionTest() throws SQLException;
     String getData() throws SQLException;
+    String getAppleData() throws SQLException;
+    String getSamsungData() throws SQLException;
 }

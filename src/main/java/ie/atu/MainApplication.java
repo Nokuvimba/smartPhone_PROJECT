@@ -18,9 +18,20 @@ public class MainApplication{
             //databaseManagement.addCustomerData();
             //databaseManagement.addStoreData();
 
+
+            /*
             String data = databaseManagement.getData();
             System.out.println("Data from database: ");
             System.out.println(data);
+
+            String appleData = databaseManagement.getAppleData();
+            System.out.println("Apple Data from database: ");
+            System.out.println(appleData);
+
+            String samsungData = databaseManagement.getSamsungData();
+            System.out.println("Samsung Data from database: ");
+            System.out.println(samsungData);
+             */
 
         } catch (SQLException e){
             e.printStackTrace();
